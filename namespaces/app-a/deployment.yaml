@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,8 +20,8 @@ spec:
     spec:
       containers:
       - name: hello
-        image: chzgustavo/test-argocd:v0.0.8
-        imagePullPolicy: IfNotPresent        
+        image: chzgustavo/test-argocd:v0.0.7
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
         resources:
