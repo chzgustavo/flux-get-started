@@ -6,6 +6,9 @@ kubectl apply -f namespaces/flux-system/namespace.yaml
 # add repository flux
 helm repo add fluxcd https://charts.fluxcd.io
 
+# update Helm repositories
+helm repo update
+
 # install flux
 helm upgrade flux fluxcd/flux --wait \
 --install \
@@ -23,7 +26,7 @@ helm upgrade flux fluxcd/flux --wait \
 --set syncGarbageCollection.dry=true \
 --set memcached.hostnameOverride=flux-memcached.flux-system
 
-# install flux-helm-operator
+# install flux-helm-operator (para trabajar con los charts)
 helm upgrade helm-operator fluxcd/helm-operator --wait \
 --install \
 --namespace flux-system \
