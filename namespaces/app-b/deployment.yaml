@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: test-argocd
-        image: chzgustavo/test-argocd:v0.0.9
+        image: chzgustavo/test-argocd:v0.0.7
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
