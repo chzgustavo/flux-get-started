@@ -13,10 +13,12 @@
 - fluxctl list-images -n app-a  // para ver las images del que utiliza namespace
 
 - cuando se borra una tag de hub-docker se puede actualizar el cluster de manera automatica a la version anterior si esta definido las anotaciones en .yaml:
-´´´    annotations:
-      fluxcd.io/automated: "true"
-      fluxcd.io/tag.test-argocd: semver:~v0.0
-´´´
+
+```
+annotations:
+  fluxcd.io/automated: "true"
+  fluxcd.io/tag.test-argocd: semver:~v0.0
+```
 
 - muestra instalacion de flux en cluster:  https://www.youtube.com/watch?v=KlUjaPZrz9c&ab_channel=Sngular
 
